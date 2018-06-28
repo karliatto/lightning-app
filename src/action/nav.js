@@ -150,6 +150,10 @@ class NavAction {
     this._store.displayCopied = false;
     this._store.route.push('/deposit');
   }
+
+  goBack() {
+    this._store.route.goBack();
+  }
 }
 
 export default NavAction;

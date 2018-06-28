@@ -273,4 +273,16 @@ describe('Action Nav Unit Tests', () => {
       expect(store.displayCopied, 'to be', false);
     });
   });
+
+  describe('goBack()', () => {
+    it('should set correct route', () => {
+      nav.goLoader();
+      nav.goHome();
+      expect(store.route.location.pathname, 'to equal', '/home');
+      nav.goBack();
+      expect(store.route.location.pathname, 'to equal', '/loader');
+      nav.goBack();
+      expect(store.route.location.pathname, 'to equal', '/');
+    });
+  });
 });
