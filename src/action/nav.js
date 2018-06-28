@@ -58,7 +58,7 @@ class NavAction {
   }
 
   goHome() {
-    this._store.route.push('/home');
+    this._store.route.replace('/home');
   }
 
   goPay() {
