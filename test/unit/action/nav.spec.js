@@ -1,3 +1,5 @@
+import createMemoryHistory from 'history/createMemoryHistory';
+import { syncHistoryWithStore } from 'mobx-react-router';
 import { Store } from '../../../src/store';
 import * as log from '../../../src/action/log';
 import NavAction from '../../../src/action/nav';
@@ -12,6 +14,7 @@ describe('Action Nav Unit Tests', () => {
     sandbox.stub(log);
     store = new Store();
     nav = new NavAction(store);
+    syncHistoryWithStore(createMemoryHistory(), store.route);
   });
 
   afterEach(() => {
@@ -21,7 +24,7 @@ describe('Action Nav Unit Tests', () => {
   describe('goLoader()', () => {
     it('should set correct route', () => {
       nav.goLoader();
-      expect(store.route, 'to equal', 'Loader');
+      expect(store.route.location.pathname, 'to equal', '/loader');
     });
   });
 
@@ -35,14 +38,14 @@ describe('Action Nav Unit Tests', () => {
   describe('goSeed()', () => {
     it('should set correct route', () => {
       nav.goSeed();
-      expect(store.route, 'to equal', 'Seed');
+      expect(store.route.location.pathname, 'to equal', '/seed');
     });
   });
 
   describe('goSeedVerify()', () => {
     it('should set correct route', () => {
       nav.goSeedVerify();
-      expect(store.route, 'to equal', 'SeedVerify');
+      expect(store.route.location.pathname, 'to equal', '/seed-verify');
     });
   });
 
@@ -56,21 +59,21 @@ describe('Action Nav Unit Tests', () => {
   describe('goSeedSuccess()', () => {
     it('should set correct route', () => {
       nav.goSeedSuccess();
-      expect(store.route, 'to equal', 'SeedSuccess');
+      expect(store.route.location.pathname, 'to equal', '/seed-success');
     });
   });
 
   describe('goSetPassword()', () => {
     it('should set correct route', () => {
       nav.goSetPassword();
-      expect(store.route, 'to equal', 'SetPassword');
+      expect(store.route.location.pathname, 'to equal', '/set-password');
     });
   });
 
   describe('goPassword()', () => {
     it('should set correct route', () => {
       nav.goPassword();
-      expect(store.route, 'to equal', 'Password');
+      expect(store.route.location.pathname, 'to equal', '/password');
     });
   });
 
@@ -84,7 +87,7 @@ describe('Action Nav Unit Tests', () => {
   describe('goNewAddress()', () => {
     it('should set correct route', () => {
       nav.goNewAddress();
-      expect(store.route, 'to equal', 'NewAddress');
+      expect(store.route.location.pathname, 'to equal', '/new-address');
     });
   });
 
@@ -105,28 +108,32 @@ describe('Action Nav Unit Tests', () => {
   describe('goHome()', () => {
     it('should set correct route', () => {
       nav.goHome();
-      expect(store.route, 'to equal', 'Home');
+      expect(store.route.location.pathname, 'to equal', '/home');
     });
   });
 
   describe('goPay()', () => {
     it('should set correct route', () => {
       nav.goPay();
-      expect(store.route, 'to equal', 'Pay');
+      expect(store.route.location.pathname, 'to equal', '/payment');
     });
   });
 
   describe('goPayLightningConfirm()', () => {
     it('should set correct route', () => {
       nav.goPayLightningConfirm();
-      expect(store.route, 'to equal', 'PayLightningConfirm');
+      expect(
+        store.route.location.pathname,
+        'to equal',
+        '/pay-lightning-confirm'
+      );
     });
   });
 
   describe('goPayLightningDone()', () => {
     it('should set correct route', () => {
       nav.goPayLightningDone();
-      expect(store.route, 'to equal', 'PayLightningDone');
+      expect(store.route.location.pathname, 'to equal', '/pay-lightning-done');
     });
   });
 
@@ -140,28 +147,28 @@ describe('Action Nav Unit Tests', () => {
   describe('goPayBitcoin()', () => {
     it('should set correct route', () => {
       nav.goPayBitcoin();
-      expect(store.route, 'to equal', 'PayBitcoin');
+      expect(store.route.location.pathname, 'to equal', '/pay-bitcoin');
     });
   });
 
   describe('goPayBitcoinConfirm()', () => {
     it('should set correct route', () => {
       nav.goPayBitcoinConfirm();
-      expect(store.route, 'to equal', 'PayBitcoinConfirm');
+      expect(store.route.location.pathname, 'to equal', '/pay-bitcoin-confirm');
     });
   });
 
   describe('goPayBitcoinDone()', () => {
     it('should set correct route', () => {
       nav.goPayBitcoinDone();
-      expect(store.route, 'to equal', 'PayBitcoinDone');
+      expect(store.route.location.pathname, 'to equal', '/pay-bitcoin-done');
     });
   });
 
   describe('goInvoice()', () => {
     it('should set correct route', () => {
       nav.goInvoice();
-      expect(store.route, 'to equal', 'Invoice');
+      expect(store.route.location.pathname, 'to equal', '/invoice');
     });
   });
 
@@ -169,7 +176,7 @@ describe('Action Nav Unit Tests', () => {
     it('should set correct route', () => {
       store.displayCopied = true;
       nav.goInvoiceQR();
-      expect(store.route, 'to equal', 'InvoiceQR');
+      expect(store.route.location.pathname, 'to equal', '/invoice-qr');
       expect(store.displayCopied, 'to be', false);
     });
   });
@@ -177,77 +184,84 @@ describe('Action Nav Unit Tests', () => {
   describe('goChannels()', () => {
     it('should set correct route', () => {
       nav.goChannels();
-      expect(store.route, 'to equal', 'Channels');
+      expect(store.route.location.pathname, 'to equal', '/channel');
     });
   });
 
   describe('goChannelDetail()', () => {
     it('should set correct route', () => {
       nav.goChannelDetail();
-      expect(store.route, 'to equal', 'ChannelDetail');
+      expect(store.route.location.pathname, 'to equal', '/channel-detail');
     });
   });
 
   describe('goChannelDelete()', () => {
     it('should set correct route', () => {
       nav.goChannelDelete();
-      expect(store.route, 'to equal', 'ChannelDelete');
+      expect(store.route.location.pathname, 'to equal', '/channel-delete');
+    });
+  });
+
+  describe('goChannelCreate()', () => {
+    it('should set correct route', () => {
+      nav.goChannelCreate();
+      expect(store.route.location.pathname, 'to equal', '/channel-create');
     });
   });
 
   describe('goTransactions()', () => {
     it('should set correct route', () => {
       nav.goTransactions();
-      expect(store.route, 'to equal', 'Transactions');
+      expect(store.route.location.pathname, 'to equal', '/transaction');
     });
   });
 
   describe('goTransactionDetail()', () => {
     it('should set correct route', () => {
       nav.goTransactionDetail();
-      expect(store.route, 'to equal', 'TransactionDetail');
+      expect(store.route.location.pathname, 'to equal', '/transaction-detail');
     });
   });
 
   describe('goNotifications()', () => {
     it('should set correct route', () => {
       nav.goNotifications();
-      expect(store.route, 'to equal', 'Notifications');
+      expect(store.route.location.pathname, 'to equal', '/notification');
     });
   });
 
   describe('goSettings()', () => {
     it('should set correct route', () => {
       nav.goSettings();
-      expect(store.route, 'to equal', 'Settings');
+      expect(store.route.location.pathname, 'to equal', '/setting');
     });
   });
 
   describe('goSettingsUnit()', () => {
     it('should set correct route', () => {
       nav.goSettingsUnit();
-      expect(store.route, 'to equal', 'SettingsUnit');
+      expect(store.route.location.pathname, 'to equal', '/setting-unit');
     });
   });
 
   describe('goSettingsFiat()', () => {
     it('should set correct route', () => {
       nav.goSettingsFiat();
-      expect(store.route, 'to equal', 'SettingsFiat');
+      expect(store.route.location.pathname, 'to equal', '/setting-fiat');
     });
   });
 
   describe('goCLI()', () => {
     it('should set correct route', () => {
       nav.goCLI();
-      expect(store.route, 'to equal', 'CLI');
+      expect(store.route.location.pathname, 'to equal', '/cli');
     });
   });
 
   describe('goCreateChannel()', () => {
     it('should set correct route', () => {
       nav.goCreateChannel();
-      expect(store.route, 'to equal', 'CreateChannel');
+      expect(store.route.location.pathname, 'to equal', '/create-channel');
     });
   });
 
@@ -255,7 +269,7 @@ describe('Action Nav Unit Tests', () => {
     it('should set correct route', () => {
       store.displayCopied = true;
       nav.goDeposit();
-      expect(store.route, 'to equal', 'Deposit');
+      expect(store.route.location.pathname, 'to equal', '/deposit');
       expect(store.displayCopied, 'to be', false);
     });
   });
