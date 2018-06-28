@@ -3,11 +3,11 @@
  */
 
 import React, { Component } from 'react';
-import Main from './view/main';
+import Navigator from './navigator';
 
 class App extends Component {
   render() {
-    return <Main />;
+    return <Navigator />;
   }
 }
 

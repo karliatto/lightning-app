@@ -5,6 +5,7 @@
  */
 
 import { extendObservable } from 'mobx';
+import { RouterStore } from 'mobx-react-router';
 import ComputedLoaderMsg from './computed/loader-msg';
 import ComputedWallet from './computed/wallet';
 import ComputedTransaction from './computed/transaction';
@@ -14,11 +15,12 @@ import ComputedPayment from './computed/payment';
 import ComputedNotification from './computed/notification';
 import ComputedSetting from './computed/setting';
 import ComputedSeed from './computed/seed';
-import { DEFAULT_ROUTE, DEFAULT_UNIT, DEFAULT_FIAT } from './config';
+import { DEFAULT_UNIT, DEFAULT_FIAT } from './config';
 
 export class Store {
   constructor() {
     extendObservable(this, {
+      route: new RouterStore(),
       loaded: false, // Is persistent data loaded
       unlockerReady: false, // Is wallet unlocker running
       firstStart: false, // Is the first time the app was started
@@ -26,7 +28,6 @@ export class Store {
       lndReady: false, // Is lnd process running
       syncedToChain: false, // Is lnd synced to blockchain
       percentSynced: 0, // Expects 0-1 range
-      route: DEFAULT_ROUTE,
       blockHeight: null,
       balanceSatoshis: 0,
       confirmedBalanceSatoshis: 0,

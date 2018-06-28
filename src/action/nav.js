@@ -10,145 +10,145 @@ class NavAction {
   }
 
   goLoader() {
-    this._store.route = 'Loader';
+    this._store.route.push('/loader');
   }
 
   goSelectSeed() {
-    this._store.route = 'SelectSeed';
+    this._store.route.push('/select-seed');
   }
 
   goSeed() {
-    this._store.route = 'Seed';
+    this._store.route.push('/seed');
   }
 
   goSeedVerify() {
-    this._store.route = 'SeedVerify';
+    this._store.route.push('/seed-verify');
   }
 
   goRestoreSeed() {
-    this._store.route = 'RestoreSeed';
+    this._store.route.push('/restore-seed');
   }
 
   goRestorePassword() {
-    this._store.route = 'RestorePassword';
+    this._store.route.push('/restore-password');
   }
 
   goSeedSuccess() {
-    this._store.route = 'SeedSuccess';
+    this._store.route.push('/seed-success');
   }
 
   goSetPassword() {
-    this._store.route = 'SetPassword';
+    this._store.route.push('/set-password');
   }
 
   goPassword() {
-    this._store.route = 'Password';
+    this._store.route.push('/password');
   }
 
   goNewAddress() {
-    this._store.route = 'NewAddress';
+    this._store.route.push('/new-address');
   }
 
   goLoaderSyncing() {
-    this._store.route = 'LoaderSyncing';
+    this._store.route.push('/loader-syncing');
   }
 
   goWait() {
-    this._store.route = 'Wait';
+    this._store.route.push('/wait');
   }
 
   goHome() {
-    this._store.route = 'Home';
+    this._store.route.push('/home');
   }
 
   goPay() {
-    this._store.route = 'Pay';
+    this._store.route.push('/payment');
   }
 
   goPayLightningConfirm() {
-    this._store.route = 'PayLightningConfirm';
+    this._store.route.push('/pay-lightning-confirm');
   }
 
   goPayLightningDone() {
-    this._store.route = 'PayLightningDone';
+    this._store.route.push('/pay-lightning-done');
   }
 
   goPaymentFailed() {
-    this._store.route = 'PaymentFailed';
+    this._store.route.push('/payment-failed');
   }
 
   goPayBitcoin() {
-    this._store.route = 'PayBitcoin';
+    this._store.route.push('/pay-bitcoin');
   }
 
   goPayBitcoinConfirm() {
-    this._store.route = 'PayBitcoinConfirm';
+    this._store.route.push('/pay-bitcoin-confirm');
   }
 
   goPayBitcoinDone() {
-    this._store.route = 'PayBitcoinDone';
+    this._store.route.push('/pay-bitcoin-done');
   }
 
   goInvoice() {
-    this._store.route = 'Invoice';
+    this._store.route.push('/invoice');
   }
 
   goInvoiceQR() {
     this._store.displayCopied = false;
-    this._store.route = 'InvoiceQR';
+    this._store.route.push('/invoice-qr');
   }
 
   goChannels() {
-    this._store.route = 'Channels';
+    this._store.route.push('/channel');
   }
 
   goChannelDetail() {
-    this._store.route = 'ChannelDetail';
+    this._store.route.push('/channel-detail');
   }
 
   goChannelDelete() {
-    this._store.route = 'ChannelDelete';
+    this._store.route.push('/channel-delete');
   }
 
   goChannelCreate() {
-    this._store.route = 'ChannelCreate';
+    this._store.route.push('/channel-create');
   }
 
   goTransactions() {
-    this._store.route = 'Transactions';
+    this._store.route.push('/transaction');
   }
 
   goTransactionDetail() {
-    this._store.route = 'TransactionDetail';
+    this._store.route.push('/transaction-detail');
   }
 
   goNotifications() {
-    this._store.route = 'Notifications';
+    this._store.route.push('/notification');
   }
 
   goSettings() {
-    this._store.route = 'Settings';
+    this._store.route.push('/setting');
   }
 
   goSettingsUnit() {
-    this._store.route = 'SettingsUnit';
+    this._store.route.push('/setting-unit');
   }
 
   goSettingsFiat() {
-    this._store.route = 'SettingsFiat';
+    this._store.route.push('/setting-fiat');
   }
 
   goCLI() {
-    this._store.route = 'CLI';
+    this._store.route.push('/cli');
   }
 
   goCreateChannel() {
-    this._store.route = 'CreateChannel';
+    this._store.route.push('/create-channel');
   }
 
   goDeposit() {
     this._store.displayCopied = false;
-    this._store.route = 'Deposit';
+    this._store.route.push('/deposit');
   }
 }
 
