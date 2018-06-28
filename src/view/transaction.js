@@ -21,7 +21,7 @@ const TransactionView = ({ store, nav, transaction }) => {
   return (
     <Background color={color.blackDark}>
       <Header separator>
-        <BackButton onPress={() => nav.goHome()} />
+        <BackButton onPress={() => nav.goBack()} />
         <Title title="Transactions" />
         <Button disabled onPress={() => {}} />
       </Header>

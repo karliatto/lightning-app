@@ -17,7 +17,7 @@ const styles = StyleSheet.create({
 const TransactionDetailView = ({ store, nav }) => (
   <Background color={color.blackDark}>
     <MainContent style={styles.content}>
-      <Modal title="Transaction Details" onClose={() => nav.goTransactions()}>
+      <Modal title="Transaction Details" onClose={() => nav.goBack()}>
         <DetailField name={store.selectedTransaction.idName}>
           {store.selectedTransaction.id}
         </DetailField>

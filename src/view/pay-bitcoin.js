@@ -33,7 +33,7 @@ const styles = StyleSheet.create({
 const PayBitcoinView = ({ store, nav, payment }) => (
   <Background image="orange-gradient-bg">
     <Header shadow color={color.orange}>
-      <BackButton onPress={() => nav.goPay()} />
+      <BackButton onPress={() => nav.goBack()} />
       <Title title="On-Chain Payment">
         <BitcoinIcon height={13.6} width={10.8} />
       </Title>

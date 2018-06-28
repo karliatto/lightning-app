@@ -33,7 +33,7 @@ const InvoiceView = ({ store, nav, invoice }) => (
       <Title title="Payment Request">
         <LightningBoltIcon height={12} width={6.1} />
       </Title>
-      <CancelButton onPress={() => nav.goHome()} />
+      <CancelButton onPress={() => nav.goBack()} />
     </Header>
     <MainContent>
       <Card>

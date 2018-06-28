@@ -25,7 +25,7 @@ const ChannelView = ({ store, nav, channel }) => {
     <Background color={color.blackDark}>
       <ChannelHeader
         goChannelCreate={() => channel.initCreate()}
-        goHome={() => nav.goHome()}
+        goBack={() => nav.goBack()}
       />
       {channels.length ? (
         <ChannelList store={store} channel={channel} />
@@ -60,10 +60,10 @@ const headerStyles = StyleSheet.create({
   },
 });
 
-const ChannelHeader = ({ goChannelCreate, goHome }) => (
+const ChannelHeader = ({ goChannelCreate, goBack }) => (
   <Header separator>
     <View style={headerStyles.btnWrapperLeft}>
-      <BackButton onPress={goHome} />
+      <BackButton onPress={goBack} />
     </View>
     <Title title="Channels" />
     <View style={headerStyles.btnWrapperRight}>
@@ -76,7 +76,7 @@ const ChannelHeader = ({ goChannelCreate, goHome }) => (
 
 ChannelHeader.propTypes = {
   goChannelCreate: PropTypes.func.isRequired,
-  goHome: PropTypes.func.isRequired,
+  goBack: PropTypes.func.isRequired,
 };
 
 //
