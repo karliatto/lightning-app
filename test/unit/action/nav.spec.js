@@ -32,7 +32,8 @@ describe('Action Nav Unit Tests', () => {
   describe('goSelectSeed()', () => {
     it('should set correct route', () => {
       nav.goSelectSeed();
-      expect(store.route, 'to equal', 'SelectSeed');
+      expect(store.route.location.pathname, 'to equal', '/select-seed');
+      expect(store.route.history.entries.length, 'to equal', 2);
     });
   });
 
@@ -55,7 +56,8 @@ describe('Action Nav Unit Tests', () => {
   describe('goRestoreSeed()', () => {
     it('should set correct route', () => {
       nav.goRestoreSeed();
-      expect(store.route, 'to equal', 'RestoreSeed');
+      expect(store.route.location.pathname, 'to equal', '/restore-seed');
+      expect(store.route.history.entries.length, 'to equal', 2);
     });
   });
 
@@ -86,7 +88,8 @@ describe('Action Nav Unit Tests', () => {
   describe('goRestorePassword()', () => {
     it('should set correct route', () => {
       nav.goRestorePassword();
-      expect(store.route, 'to equal', 'RestorePassword');
+      expect(store.route.location.pathname, 'to equal', '/restore-password');
+      expect(store.route.history.entries.length, 'to equal', 2);
     });
   });
 
@@ -101,14 +104,16 @@ describe('Action Nav Unit Tests', () => {
   describe('goLoaderSyncing()', () => {
     it('should set correct route', () => {
       nav.goLoaderSyncing();
-      expect(store.route, 'to equal', 'LoaderSyncing');
+      expect(store.route.location.pathname, 'to equal', '/loader-syncing');
+      expect(store.route.history.entries.length, 'to equal', 2);
     });
   });
 
   describe('goWait()', () => {
     it('should set correct route', () => {
       nav.goWait();
-      expect(store.route, 'to equal', 'Wait');
+      expect(store.route.location.pathname, 'to equal', '/wait');
+      expect(store.route.history.entries.length, 'to equal', 2);
     });
   });
 
@@ -150,7 +155,8 @@ describe('Action Nav Unit Tests', () => {
   describe('goPaymentFailed()', () => {
     it('should set correct route', () => {
       nav.goPaymentFailed();
-      expect(store.route, 'to equal', 'PaymentFailed');
+      expect(store.route.location.pathname, 'to equal', '/payment-failed');
+      expect(store.route.history.entries.length, 'to equal', 2);
     });
   });
 
