@@ -335,13 +335,14 @@ const downStyles = StyleSheet.create({
   text: {
     fontFamily: 'OpenSans SemiBold',
     fontSize: font.sizeS,
+    lineHeight: font.lineHeightS,
   },
 });
 
 export const DownButton = ({ onPress, disabled, style, children }) => (
   <Button onPress={onPress} disabled={disabled} style={style}>
     <Text style={downStyles.text}>{children}</Text>
-    <ArrowDownIcon height={7.2} width={18.4} />
+    <ArrowDownIcon height={24 * 0.8} width={24 * 0.8} />
   </Button>
 );
 

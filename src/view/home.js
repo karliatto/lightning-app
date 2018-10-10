@@ -199,7 +199,7 @@ const HomeHeader = ({ goChannels, goSettings, showChannelAlert }) => (
     <Title title="Wallet" />
     <View style={headerStyles.btnWrapperRight}>
       <SmallButton text="Settings" onPress={goSettings}>
-        <SettingsIcon height={21 * 0.7} width={20 * 0.7} />
+        <SettingsIcon height={24 * 0.7} width={24 * 0.7} />
       </SmallButton>
     </View>
   </Header>
