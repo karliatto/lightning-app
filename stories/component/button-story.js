@@ -88,7 +88,7 @@ storiesOf('Button', module)
   ))
   .add('Small Icon', () => (
     <SmallButton border text="Small Icon" onPress={action('clicked')}>
-      <CancelIcon height={12} width={12} />
+      <CancelIcon height={16} width={16} />
     </SmallButton>
   ))
   .add('Small Alert', () => (
@@ -114,12 +114,12 @@ storiesOf('Button', module)
   ))
   .add('Icon Button', () => (
     <Button onPress={action('clicked')}>
-      <CancelIcon height={14} width={14} />
+      <CancelIcon height={22} width={22} />
     </Button>
   ))
   .add('Icon Disabled', () => (
     <Button disabled onPress={action('clicked')}>
-      <CancelIcon height={14} width={14} />
+      <CancelIcon height={22} width={22} />
     </Button>
   ))
   .add('Back Button', () => <BackButton onPress={action('clicked')} />)

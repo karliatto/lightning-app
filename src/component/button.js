@@ -266,7 +266,7 @@ SmallPillButton.propTypes = {
 
 export const BackButton = ({ onPress, disabled, style }) => (
   <Button onPress={onPress} disabled={disabled} style={style}>
-    <BackIcon height={14} width={8.4} />
+    <BackIcon height={22} width={22} />
   </Button>
 );
 
@@ -282,7 +282,7 @@ BackButton.propTypes = {
 
 export const CancelButton = ({ onPress, disabled, style }) => (
   <Button onPress={onPress} disabled={disabled} style={style}>
-    <CancelIcon height={14} width={14} />
+    <CancelIcon height={22} width={22} />
   </Button>
 );
 

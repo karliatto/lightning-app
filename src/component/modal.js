@@ -38,7 +38,7 @@ class Modal extends Escapable {
       <View style={[styles.modal, style]}>
         <H4Text style={styles.title}>{title.toUpperCase()}</H4Text>
         <Button style={styles.cancelBtn} onPress={onClose}>
-          <CancelGreyIcon height={12} width={12} />
+          <CancelGreyIcon height={20} width={20} />
         </Button>
         {children}
       </View>

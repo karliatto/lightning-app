@@ -68,7 +68,7 @@ const ChannelHeader = ({ goChannelCreate, goHome }) => (
     <Title title="Channels" />
     <View style={headerStyles.btnWrapperRight}>
       <SmallButton border text="Add" onPress={goChannelCreate}>
-        <PlusIcon height={12} width={12} />
+        <PlusIcon height={16} width={16} />
       </SmallButton>
     </View>
   </Header>

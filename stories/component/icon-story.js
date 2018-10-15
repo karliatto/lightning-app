@@ -17,9 +17,9 @@ storiesOf('Icons', module)
       <MainContent style={{ justifyContent: 'center' }}>{story()}</MainContent>
     </Background>
   ))
-  .add('Back', () => <BackIcon height={20} width={12} />)
-  .add('Plus', () => <PlusIcon height={21} width={21} />)
-  .add('Cancel', () => <CancelIcon height={21} width={21} />)
+  .add('Back', () => <BackIcon height={24} width={24} />)
+  .add('Plus', () => <PlusIcon height={24} width={24} />)
+  .add('Cancel', () => <CancelIcon height={24} width={24} />)
   .add('Arrow Down', () => <ArrowDownIcon height={24} width={24} />)
   .add('Lightning Bolt', () => <LightningBoltIcon height={126} width={64} />)
   .add('QR Code', () => <QrIcon height={39} width={40} />)

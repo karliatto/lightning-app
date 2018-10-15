@@ -148,7 +148,7 @@ export const SettingItem = ({ name, onSelect, label, arrow, children }) => (
     {children}
     {arrow ? (
       <View style={iStyles.iconWrapper}>
-        <ForwardIcon height={13.5} width={8.1} />
+        <ForwardIcon height={22} width={22} />
       </View>
     ) : null}
   </ListItem>
