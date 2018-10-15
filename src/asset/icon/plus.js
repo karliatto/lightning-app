@@ -1,19 +1,19 @@
 import React from 'react';
-import Svg, { G, Rect } from '../../component/svg';
-const Plus = props => (
-  <Svg viewBox="0 0 14 14" width="1em" height="1em" {...props}>
-    <G fill="#FFF" fillRule="evenodd">
-      <Rect x={6.58} y={0.599} width={1.335} height={13.349} rx={0.667} />
-      <Rect
-        transform="rotate(90 7.247 7.273)"
-        x={6.58}
-        y={0.599}
-        width={1.335}
-        height={13.349}
-        rx={0.667}
-      />
-    </G>
+import Svg, { Path } from '../../component/svg';
+const SvgPlus = props => (
+  <Svg
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="#FFF"
+    strokeWidth={2}
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    width="1em"
+    height="1em"
+    {...props}
+  >
+    <Path d="M12 5v14M5 12h14" />
   </Svg>
 );
 
-export default Plus;
+export default SvgPlus;
