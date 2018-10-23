@@ -97,5 +97,5 @@ export const minAspectRatio = aspectRatioQuery(
   (target, aspectRatio) => target <= aspectRatio
 );
 export const aspectRatio = aspectRatioQuery(
-  (target, aspectRatio) => target == aspectRatio
+  (target, aspectRatio) => target === aspectRatio
 );
